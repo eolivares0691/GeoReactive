@@ -1,0 +1,108 @@
+<section lang="es" data-theme="sunset" class="max-h-[84vh] overflow-auto">
+  <title>Proyecto de Búsqueda de Países | Angular</title>
+  <style>
+    .text-gradient {
+      background-image: linear-gradient(90deg, #34d399, #60a5fa);
+      -webkit-background-clip: text;
+      -moz-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -moz-text-fill-color: transparent;
+    }
+  </style>
+
+  <body class="bg-base-100 text-base-content font-sans antialiased">
+
+    <header class="min-h-[10vh] my-5 flex items-center justify-center text-center bg-base-200/50">
+      <div class="max-w-4xl mx-auto px-4">
+        <h1 class="text-5xl md:text-5xl font-bold mb-4">
+          <span class="text-gradient">GeoReactive</span>
+        </h1>
+        <p class="text-gradient">El Catálogo del Mundo</p>
+        <!-- <p class="text-lg md:text-2xl text-base-content/70">
+          Una aplicación moderna construida con Angular 19+, rxResource y las mejores prácticas de desarrollo reactivo.
+        </p> -->
+        <button routerLink="/country" class="btn btn-primary mt-8 text-2xl w-[150px] ">Empezar</button>
+      </div>
+    </header>
+
+    <main class="container mx-auto  p-4 md:p-8 ">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <div class="card bg-base-200 shadow-2xl lg:col-span-2">
+          <div class="card-body">
+            <h2 class="card-title text-2xl font-bold">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block mr-2" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+              </svg>
+              Core del Proyecto
+            </h2>
+            <p class="mb-4">Se utilizó la sintaxis moderna y las nuevas características de **Angular 19+**, aprovechando
+              su potencial para crear aplicaciones reactivas y eficientes.</p>
+            <ul class="space-y-3">
+              <li><strong class="text-primary">Framework de Diseño:</strong> Se implementó **DaisyUI** sobre Tailwind
+                CSS para una interfaz de usuario limpia y personalizable.</li>
+              <li><strong class="text-primary">Gestión de Datos:</strong> El proyecto implementa **rxResource** para la
+                gestión de estado y peticiones HTTP, evitando la lógica duplicada.</li>
+              <li><strong class="text-primary">Peticiones HTTP:</strong> La interacción con la API se maneja de forma
+                flexible a través de **objetos, promesas y observables**, demostrando el manejo de asincronía.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card bg-base-200 shadow-2xl">
+          <div class="card-body">
+            <h2 class="card-title text-2xl font-bold">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block mr-2" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
+              API y Funcionalidad
+            </h2>
+            <p>Para el consumo de datos se utiliza la API <a href="https://restcountries.com/" target="_blank"
+                class="link link-primary">REST Countries v3.1</a>.</p>
+            <div class="divider"></div>
+            <p class="font-semibold">La búsqueda se activa por:</p>
+            <ul class="list-disc list-inside mt-2">
+              <li>Escritura (con debounce).</li>
+              <li>Tecla "Enter".</li>
+              <li>Botón de búsqueda.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card bg-base-200 shadow-2xl lg:col-span-3">
+          <div class="card-body">
+            <h2 class="card-title text-2xl font-bold">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block mr-2" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-14v4m-2-2h4m5 10v4m-2-2h4M5 3a2 2 0 00-2 2v1m16 0V5a2 2 0 00-2-2h-1m-4 16a2 2 0 01-2 2H7a2 2 0 01-2-2v-1m16 0v1a2 2 0 01-2 2h-1" />
+              </svg>
+              Tecnologías y Recursos Utilizados
+            </h2>
+            <div class="flex flex-wrap gap-2 mt-4">
+              <span class="badge badge-lg badge-primary">Signals</span>
+              <span class="badge badge-lg badge-primary">Services</span>
+              <span class="badge badge-lg badge-secondary">Resources y rxResources</span>
+              <span class="badge badge-lg badge-accent">Reutilización de Componentes</span>
+              <span class="badge badge-lg badge-info">Peticiones HTTP</span>
+              <span class="badge badge-lg badge-success">Operadores de RxJS</span>
+              <span class="badge badge-lg badge-warning">Debounce (effect)</span>
+              <span class="badge badge-lg badge-error">Cache</span>
+              <span class="badge badge-lg badge-neutral">Preservación de Estado (queryParams)</span>
+              <span class="badge badge-lg badge-ghost">Tailwind CSS</span>
+              <span class="badge badge-lg badge-ghost">DaisyUI</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+
+
+  </body>
+</section>

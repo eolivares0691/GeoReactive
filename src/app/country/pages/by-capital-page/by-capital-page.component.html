@@ -1,0 +1,13 @@
+<country-search-input
+placeholderSearch="Buscar por capital"
+(searchValue)="query.set($event) "
+[debounceTime]="300"
+[initialValue]="query()">
+  <!-- (searchValue)="onSearch($event)"    Este codigo pertenece al llamamiento sin resource (nueva funcion para llamar peticiones) -->
+</country-search-input>
+
+<country-list
+[countries]=" countryResource.value() ?? []"
+[errorMessage]="countryResource.error()"
+[isEmpty]="countryResource.value()?.length === 0"
+[isLoading]="countryResource.isLoading()"></country-list>

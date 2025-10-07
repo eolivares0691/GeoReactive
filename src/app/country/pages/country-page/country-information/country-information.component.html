@@ -1,0 +1,41 @@
+<h1 class="md:text-4xl max-sm:text-3xl font-black grid w-full justify-center text-center text-shadow-white">{{country().nativeNameSpa}}</h1>
+<h2 class=" grid w-full justify-center text-shadow-white">{{country().capital}}</h2>
+<section class="place-items-center w-full">
+  <div class="card bg-base-100 shadow-sm w-10/12">
+    <div class="card-body ">
+
+      <div class="stats shadow w-full place-content-center lg:flex max-md:table-row-group  ">
+
+        <div class="stat place-items-center ">
+          <div class="stat-title">Población:</div>
+          <div class="stat-value">{{country().population | number}}</div>
+          <div class="stat-desc">Desde {{currentYear()}}</div>
+        </div>
+
+        <div class="stat place-items-center ">
+          <div class="stat-title">Región</div>
+          <div class="stat-value text-secondary">{{country().region}}</div>
+          <div class="stat-desc text-secondary">{{country().subRegion}} </div>
+        </div>
+
+        <div class="stat place-items-center  ">
+          <div class="stat-title">Área</div>
+          <div class="stat-value">{{country().area|number}}</div>
+          <div class="stat-desc">Metros cuadrados</div>
+        </div>
+
+      </div>
+
+      <section class="diff aspect-16/9 h-[27rem]" tabindex="0">
+        <div class="diff-item-1" role="img" tabindex="0">
+          <img [alt]="country().name" [src]="country().flagsvg" />
+        </div>
+        <div class="diff-item-2" role="img">
+          <img class="blur brightness-75" [alt]="country().name" [src]="country().flagsvg" />
+        </div>
+        <div class="diff-resizer"></div>
+      </section>
+
+    </div>
+  </div>
+</section>

@@ -1,0 +1,11 @@
+<section class="flex flex-row mt-2 px-9 ">
+  <div class="max-sm:columns-3">
+    @for (region of regions; track region) {
+    <button class="btn btn-outline mr-3 w-[100px] max-sm:my-2 max-sm:w-[80px] "
+      (click)="searchValueRegion.emit(region); selectedRegion.set(region);"
+      [class.btn-primary]="selectedRegion()==region">
+      {{region | titlecase}}
+    </button>
+    }
+  </div>
+</section>

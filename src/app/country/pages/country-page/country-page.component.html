@@ -1,0 +1,20 @@
+@if(countryResource.error()){
+<not-found [errorMessage]="'No se encontró el país'"></not-found>
+}
+
+
+@if (countryResource.isLoading()) {
+  <div class="w-full text-center">
+
+    <h1 class="text-3xl"> Cargando... </h1>
+    <span class="ma  loading loading-bars loading-xl"></span>
+  </div>
+}
+
+@if (countryResource.hasValue())
+{
+  <country-information [country]="countryResource.value() "></country-information>
+
+
+
+}

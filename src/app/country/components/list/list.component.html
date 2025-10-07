@@ -1,0 +1,66 @@
+<section class="mt-5 px-9 h-[37rem] overflow-auto">
+  <table class="table table-md mt-2 ">
+    <thead>
+      <tr>
+        <th class="max-sm:flex-none max-sm:invisible max-sm:max-w-0" >#</th>
+        <th class="max-sm:flex-none max-sm:invisible max-sm:max-w-0" >Ícono</th>
+        <th>Bandera</th>
+        <th>Nombre</th>
+        <th class="max-sm:flex-none max-sm:invisible max-sm:max-w-0" >Capital</th>
+        <th class="max-sm:flex-none max-sm:invisible max-sm:max-w-0" >Población</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (country of countries(); track country.cca2; let index = $index) {
+      <tr>
+        <td class="max-sm:flex-none max-sm:invisible max-sm:max-w-0" >{{index + 1}}</td>
+        <td class="max-sm:flex-none max-sm:invisible max-sm:max-w-0" >{{country.flag}}</td>
+        <td>
+          <img [src]="country.flagsvg" [alt]="country.name" class="w-10">
+        </td>
+        <!-- <td>{{country.name}}</td> -->
+        <td>{{country.spaName}}</td>
+        <td class="max-sm:flex-none max-sm:invisible max-sm:max-w-0" >{{country.capital }}</td>
+        <td class="max-sm:flex-none max-sm:invisible max-sm:max-w-0" >
+          <span class="badge badge-secondary">
+            {{country.population | number}}
+          </span>
+        </td>
+        <td>
+          <a [routerLink]="['/country/by/',country.cca2]" class="link-primary cursor-pointer"> Más información </a>
+        </td>
+      </tr>
+      }
+
+      @if (errorMessage()) {
+      <tr>
+        <td colspan="8" class="text-center">
+          {{errorMessage()}}
+        </td>
+      </tr>
+      }
+
+
+      <!-- @if (countries().length === 0 && !isLoading()) {
+      <tr>
+        <td colspan="8" class="text-center">
+          No se encontraron resultados
+        </td>
+      </tr>
+      } -->
+
+      @if (isLoading()) {
+      <tr>
+        <td colspan="8" class="text-center">
+          Buscando países
+          <span class="loading loading-dots loading-md"></span>
+        </td>
+      </tr>
+      }
+
+    </tbody>
+
+  </table>
+
+
+</section>
