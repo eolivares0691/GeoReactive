@@ -8,13 +8,8 @@
   (keyup.enter)="searchValue.emit(txtSearch.value)"
   (keyup)="inputValue.set(txtSearch.value)"
   [value]="inputValue()"/>
-  <!-- si no tenemos la necesidad de validar los valores ingresados, entonces podemos emitir el valor de una vez -->
-   <!-- De lo contrario, tenemos que hacer un a función que evalúa y emite después de evaluar -->
   <button class="btn btn-primary" (click)="searchValue.emit(txtSearch.value)">
       Buscar
   </button>
 </section>
 
-
-
-<!-- Bebounce --- Funciona para que cuando el usuario deje de escribir por un par de segundos, se realice la peticion HTTP  -->

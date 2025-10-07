@@ -18,7 +18,6 @@
         <td>
           <img [src]="country.flagsvg" [alt]="country.name" class="w-10">
         </td>
-        <!-- <td>{{country.name}}</td> -->
         <td>{{country.spaName}}</td>
         <td class="max-sm:flex-none max-sm:invisible max-sm:max-w-0" >{{country.capital }}</td>
         <td class="max-sm:flex-none max-sm:invisible max-sm:max-w-0" >
@@ -39,15 +38,6 @@
         </td>
       </tr>
       }
-
-
-      <!-- @if (countries().length === 0 && !isLoading()) {
-      <tr>
-        <td colspan="8" class="text-center">
-          No se encontraron resultados
-        </td>
-      </tr>
-      } -->
 
       @if (isLoading()) {
       <tr>
